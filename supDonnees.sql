@@ -1,0 +1,10 @@
+truncate table AVION;
+truncate table REVISION;
+truncate table personnel_sol;
+truncate table personnel_nav;
+truncate table Client;
+truncate table VOL;
+truncate table Mission;
+truncate table escale;
+truncate table Equipage_Vol;
+truncate table Reservation;
