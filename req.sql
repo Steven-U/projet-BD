@@ -135,19 +135,20 @@ and date_rev = (Select max(date_rev) from revision);
 
 -- 8 ° ) Quel est le prochain vol Ã  destination d'Annecy au départ de Créteil ?
 
--- A FINIR
-
-SELECT NUM_VOL 
-FROM VOL V, MISSION MIS
-WHERE V.NUM_VOL = MIS.NUM_VOL
-AND MIS.VILLE_DEP = 'Creteil'
-AND MIS.VILLE_ARR = 'Annecy'
-AND MIS.DATE_DEPART = --FORMULE A METTRE POUR CORRESPONDRE A PROCHAIN VOL
-
-
-
-
-
+	-- MARCHE
+	SELECT DISTINCT V.DATE_DEPART
+	
+	FROM MISSION M, VOL V, (
+	SELECT E.NUM_MISSION AS numero, COUNT(E.NUM_MISSION) AS Nombre
+	FROM ESCALE E
+	GROUP BY E.NUM_MISSION
+	HAVING COUNT( E.NUM_MISSION ) = 1
+	)
+	
+	WHERE numero = M.NUM
+	AND M.VILLE_DEP = 'Créteil'
+	AND M.NUM = V.NUM_MISSION;
+	-- MARCHE
 
 -- 9 ° ) Quels sont les pilotes qui ne sont jamais allés Ã  Annecy ?
 
