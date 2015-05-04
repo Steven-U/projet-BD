@@ -93,15 +93,15 @@ and date_rev = (Select max(date_rev) from revision);
 
 --MARCHE PAS. JCOMPREND PAS LE CODE LA(TUGAY) 
 
-	WITH A AS
+	WITH Apopo AS
 	(
 	Select m.num, COUNT(*) AS N,
 		   MAX(count(*)) OVER() AS maxi -- Over retourne toutes les valeurs max
 	FROM   MISSION m, ESCALE e
 	Where e.num_mission = m.num
 	GROUP BY m.num)
-	SELECT m.num
-	FROM   A
+	SELECT Apopo.num
+	FROM   Apopo
 	WHERE  maxi = N;
 
 -- 6 ° ) Quelle est la ville comportant le plus de mission de vols au départ et Ã  l'arrivée confondus ?
