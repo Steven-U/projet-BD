@@ -154,7 +154,7 @@ AND MIS.DATE_DEPART = --FORMULE A METTRE POUR CORRESPONDRE A PROCHAIN VOL
 --MARCHE A PRIORI A TESTER 
 
 
-	SELECT
+		SELECT distinct
 		pn.nom, pn.prenom,
 		M.num,
 		M.ville_dep,
@@ -167,8 +167,8 @@ AND MIS.DATE_DEPART = --FORMULE A METTRE POUR CORRESPONDRE A PROCHAIN VOL
 		and pn.fonction  = 'pilote'
 		and M.num = V.num_mission (+)
 		and M.ville_arr != 'Annecy'
-		and E.num_mission = M.num (+)
-		and E.ville != 'Annecy';
+		and E.num_mission = M.num (+);
+	--	and E.ville != 'Annecy';
 	
 -- 10 ° ) Quels sont les vols au départ de Créteil ayant une escale maximum ?
 
