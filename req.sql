@@ -108,15 +108,19 @@ and date_rev = (Select max(date_rev) from revision);
 
 	--à finir...
   
-	Select * FROM
-	(
-	SELECT num, ville_arr as Ville
+  With Tot as
+  (
+	SELECT Ville, count(num) as NbMission
+	FROM ( SELECT num, ville_arr as Ville
 	FROM MISSION
 	UNION
 	SELECT num, ville_dep as Ville
-	FROM MISSION
-	)
-	Where max(count(*))
+	FROM MISSION )
+  group by Ville 
+  )
+	Select *
+  FROM Tot
+  where NbMission = ( select max(NbMission) from Tot);
 
 -- 7 ° ) Quel est le nom du pilote affecté au vol du 19 décembre 2014 au départ de Créteil Ã  10h00 ?
 
