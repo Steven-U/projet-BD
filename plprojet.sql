@@ -2,7 +2,7 @@
 
 --Cette procédure affecte un avion à un vol donné.  
 --Définissez la signature, les contrôles fonctionnels associés
-#################################################################################################################"
+#################################################################################################################
 CREATE OR REPLACE PROCEDURE P_AFFECTATION_AVION(numeroAvion NUMBER, numeroVol NUMBER) IS
 
 declare
