@@ -2,6 +2,7 @@
 
 --Cette procédure affecte un avion à un vol donné.  
 --Définissez la signature, les contrôles fonctionnels associés
+#################################################################################################################"
 CREATE OR REPLACE PROCEDURE P_AFFECTATION_AVION(numeroAvion NUMBER, numeroVol NUMBER) IS
 
 declare
@@ -15,7 +16,25 @@ DBms_output.put_line();
 
 end
 ;
-
+##################################################################################################################
+--Version 2 : J'ai modifier table vol, drop foreignkey avion et modifier not en nullable de vol(avion)
+--Ajout d'un vol sans avion, et drop foreign key num_mission de la table vol. a Quoi il sert celui la ??
+--Et remis foreign key sur avion de la table vol pour eviter un controle dans la procédure suivante.
+--Ma procédure met simplement a jour un vol en lui ajoutant l'avion mis en paramètre.
+--Comme ya foreign key entre avion et avion.id pas de souci d'existance ni de controle
+--Si vol.num_vol exitant pas gestion d'erreur le gère
+CREATE OR REPLACE PROCEDURE P_AFFECTATION_AVION(numeroAvion NUMBER, numeroVol NUMBER) AS
+BEGIN
+  Update vol
+  set vol.AVION = numeroAvion
+  Where vol.num_vol = numeroVol;
+  EXCEPTION WHEN OTHERS THEN
+  DBMS_OUTPUT.PUT_LINE('SQLCODE:'||SQLCODE||'SQLERROR:'||SQLERRM);
+  RAISE_APPLICATION_ERROR(-20000,'Une erreur imprévue s est produite');
+END  ;
+--EXECUTION DE LA PROCEDURE AJOUTE BIEN L'AVION id 3 AU VOL 1904
+EXEC  P_AFFECTATION_AVION(3,1904);
+#####################################################################################################################
 
 --Cette procédure affecte un pilote à un vol donné. 
 --Définissez la signature, les contrôles fonctionnels associés. 
