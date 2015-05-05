@@ -30,7 +30,7 @@ BEGIN
   Where vol.num_vol = numeroVol;
   EXCEPTION WHEN OTHERS THEN
   DBMS_OUTPUT.PUT_LINE('SQLCODE:'||SQLCODE||'SQLERROR:'||SQLERRM);
-  RAISE_APPLICATION_ERROR(-20000,'Une erreur imprévue s est produite');
+  RAISE_APPLICATION_ERROR(-20000,'Vérifier l existance de l avion ainsi que le vol');
 END  ;
 --EXECUTION DE LA PROCEDURE AJOUTE BIEN L'AVION id 3 AU VOL 1904
 EXEC  P_AFFECTATION_AVION(3,1904);
