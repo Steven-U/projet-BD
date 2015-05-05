@@ -1,14 +1,37 @@
 --Cette procédure affecte un avion à un vol donné.  
 --Définissez la signature, les contrôles fonctionnels associés
-CREATE OR REPLACE PROCEDURE P_AFFECTATION_AVION(numeroAvion NUMBER, numeroVol NUMBER)
+CREATE OR REPLACE PROCEDURE P_AFFECTATION_AVION(numeroAvion NUMBER, numeroVol NUMBER) IS
 
+BEGIN
+
+Insert into 
+
+declare
+CURSOR c1 is select * from avion where typeavion= '&typeavion';
+v_nbh number:=0;
+
+BEGIN
+for enreg in c1 loop
+v_nbh := v_nbh + enreg.nbr_heure_vol;
+end loop;
+DBms_output.put_line('le total dheure de vol est :'||v_nbh);
+
+end
 ;
+
 
 --Cette procédure affecte un pilote à un vol donné. 
 --Définissez la signature, les contrôles fonctionnels associés. 
 --Donner un exemple de test avec un jeu de données pertinent pour ces procédures. 
 CREATE OR REPLACE PROCEDURE P_AFFECTATION_PILOTE(numeroPilote NUMBER, numeroVol NUMBER)
 
+BEGIN
+
+Insert into 
+
+DECLARE
+
+END
 ;
 
 
@@ -21,10 +44,22 @@ CREATE OR REPLACE PROCEDURE P_RESERVATION(villeOrigine VARCHAR2(30), villeDestin
 
 ;
 
---Cette procédurehistorise les informations de réservation antérieures à une date donnée
+--Cette procédure historise les informations de réservation antérieures à une date donnée
 CREATE OR REPLACE PROCEDURE P_HIST_RESERVATION(dateHisto DATE)
+
+
+BEGIN
+
+DECLARE
+
+CREATE TABLE Hist_Reservation(
+
+END
 ;
 
+
 --Cette procédure met à jour chaque nuit les compteurs d’heures de vol du jour des avions, pilotes, stewards et hôtesses
-CREATE OR REPLACE PROCEDURE P_MAJ_COMPTEURS
+CREATE OR REPLACE PROCEDURE P_MAJ_COMPTEURS IS
+
+
 ;
