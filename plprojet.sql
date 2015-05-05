@@ -2,12 +2,8 @@
 --Définissez la signature, les contrôles fonctionnels associés
 CREATE OR REPLACE PROCEDURE P_AFFECTATION_AVION(numeroAvion NUMBER, numeroVol NUMBER) IS
 
-BEGIN
-
-Insert into 
-
 declare
-CURSOR c1 is select * from avion where typeavion= '&typeavion';
+CURSOR c1 is select num from avion;
 v_nbh number:=0;
 
 BEGIN
@@ -42,17 +38,45 @@ END
 -- On souhaitera faire en sorte dans les jeux de tests que l’avion soit déjà plein pour cette réservation. 
 CREATE OR REPLACE PROCEDURE P_RESERVATION(villeOrigine VARCHAR2(30), villeDestination VARCHAR2(30), dateVol DATE, nombrePassagers NUMBER(2), nomClient VARCHAR2(30) , listePassager VARCHAR(30))
 
+DECLARE
+
+//
+
+CURSOR c1 IS
+select ;
+
+BEGIN
+
+open c1
+fetch 
+
+
+DBms_output.put_line('résultat ok');
+
+
+close c1
+
 ;
 
 --Cette procédure historise les informations de réservation antérieures à une date donnée
 CREATE OR REPLACE PROCEDURE P_HIST_RESERVATION(dateHisto DATE)
 
+DECLARE
+
+//
+
+CURSOR c1 IS
+select ;
 
 BEGIN
 
-DECLARE
+open c1
+fetch 
 
-CREATE TABLE Hist_Reservation(
+close c1
+
+CREATE TABLE Hist_Reservation(dateHisto Date);
+
 
 END
 ;
@@ -60,6 +84,9 @@ END
 
 --Cette procédure met à jour chaque nuit les compteurs d’heures de vol du jour des avions, pilotes, stewards et hôtesses
 CREATE OR REPLACE PROCEDURE P_MAJ_COMPTEURS IS
+
+BEGIN
+
 
 
 ;
