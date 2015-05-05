@@ -1,5 +1,7 @@
 --Supression des données
 
+--Changer l'ordre pour ne pas avoir de problème avec les contraintes
+
 drop table AVION;
 drop table REVISION;
 drop table personnel_sol;
