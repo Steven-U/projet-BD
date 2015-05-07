@@ -1,12 +1,12 @@
 
  
 --AVION : 5 appareils
-INSERT INTO AVION (id,immatriculation,type_avion,date_MS,nb_h_vol_dr,capacite,modele) VALUES (SEQAVION.nextval,'2345297400','A231','01/01/2015','0','150','A231');
-INSERT INTO AVION (id, immatriculation,type_avion,date_MS,nb_h_vol_dr,capacite,modele) VALUES (SEQAVION.nextval,'8798124687','B522','01/01/2012','20','100','B522');
-INSERT INTO AVION (id, immatriculation,type_avion,date_MS,nb_h_vol_dr,capacite,modele) VALUES (SEQAVION.nextval,'8798124687','B522','01/01/2012','20','100','B522');
-INSERT INTO AVION (id, immatriculation,type_avion,date_MS,nb_h_vol_dr,capacite,modele) VALUES (SEQAVION.nextval,'4578932161','A320','01/03/2013','150','150','A320');
-INSERT INTO AVION (id, immatriculation,type_avion,date_MS,nb_h_vol_dr,capacite,modele) VALUES (SEQAVION.nextval,'6578421349','B650','01/01/2014','300','200','B650');
-INSERT INTO AVION (id, immatriculation,type_avion,date_MS,nb_h_vol_dr,capacite,modele) VALUES (SEQAVION.nextval,'5784932421','A320','01/02/2014','100','100','A320');
+INSERT INTO AVION (id,immatriculation,type_avion,date_MS,nb_h_vol_dr,capacite,modele) VALUES (SEQAVION.nextval,'2345297400','A231','01/01/2015','0','15','A231');
+INSERT INTO AVION (id, immatriculation,type_avion,date_MS,nb_h_vol_dr,capacite,modele) VALUES (SEQAVION.nextval,'8798124687','B522','01/01/2012','20','30','B522');
+INSERT INTO AVION (id, immatriculation,type_avion,date_MS,nb_h_vol_dr,capacite,modele) VALUES (SEQAVION.nextval,'8798124687','B522','01/01/2012','20','30','B522');
+INSERT INTO AVION (id, immatriculation,type_avion,date_MS,nb_h_vol_dr,capacite,modele) VALUES (SEQAVION.nextval,'4578932161','A320','01/03/2013','150','15','A320');
+INSERT INTO AVION (id, immatriculation,type_avion,date_MS,nb_h_vol_dr,capacite,modele) VALUES (SEQAVION.nextval,'6578421349','B650','01/01/2014','300','20','B650');
+INSERT INTO AVION (id, immatriculation,type_avion,date_MS,nb_h_vol_dr,capacite,modele) VALUES (SEQAVION.nextval,'5784932421','A320','01/02/2014','100','15','A320');
   
 INSERT INTO personnel_nav (id,prenom,nom,tel,adr,salaire,fonction,date_emb) VALUES (seqpersnav.nextval,'Fernando','Alonso','0102030405','1 rue de Paris','3000','pilote','01/02/2014');
 INSERT INTO personnel_nav (id,prenom,nom,tel,adr,salaire,fonction,date_emb) VALUES (seqpersnav.nextval,'Jules', 'Bianchi','0103030406','2 rue de Paris','3200','pilote','01/01/2014');
