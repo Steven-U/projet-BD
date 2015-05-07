@@ -96,6 +96,8 @@ CREATE TABLE VOL (
 	date_depart 	DATE NOT NULL,
 	num_mission 	NUMBER NOT NULL,
 	avion 			NUMBER NOT NULL,
+	ville_dep 		varchar2(50) NOT NULL,
+	ville_arr 		varchar2(50) NOT NULL,
 	PRIMARY KEY (id),
 	FOREIGN KEY (num_mission) REFERENCES Mission(num),
 	FOREIGN KEY (avion) REFERENCES avion(id)
