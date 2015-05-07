@@ -88,20 +88,6 @@ CREATE TABLE Client (
 	PRIMARY KEY (id)
 );
 
---Mission
-
-CREATE TABLE Mission (
-	num 			NUMBER NOT NULL,
-	num_vol  		varchar2(10) NOT NULL,
-	date_depart 	DATE NOT NULL,
-	h_dep 			NUMBER NOT NULL,
-	id_avion 			NUMBER NOT NULL,
-	ville_dep 		varchar2(50) NOT NULL,
-	ville_arr 		varchar2(50) NOT NULL,
-	PRIMARY KEY (num),
-	FOREIGN KEY (id_avion) REFERENCES avion(id) ON DELETE CASCADE
-);
-
 --Vol
 
 CREATE TABLE VOL (
@@ -115,7 +101,19 @@ CREATE TABLE VOL (
 	FOREIGN KEY (avion) REFERENCES avion(id)
 ); 
 
+--Mission
 
+CREATE TABLE Mission (
+	num 			NUMBER NOT NULL,
+	num_vol  		varchar2(10) NOT NULL,
+	date_depart 	DATE NOT NULL,
+	h_dep 			NUMBER NOT NULL,
+	id_avion 			NUMBER NOT NULL,
+	ville_dep 		varchar2(50) NOT NULL,
+	ville_arr 		varchar2(50) NOT NULL,
+	PRIMARY KEY (num),
+	FOREIGN KEY (id_avion) REFERENCES avion(id) ON DELETE CASCADE
+);
 
 --Escale
 CREATE TABLE escale (
