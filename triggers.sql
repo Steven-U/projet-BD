@@ -1,4 +1,9 @@
 -- Trigger qui vérifie que l'heure de départ < l'heure d'arrivée
+
+
+--TRIGGER
+
+--La capacité de ces appareils est comprise entre 15 et 30 places en fonction des types. 
 CREATE OR REPLACE TRIGGER check_place AFTER
 UPDATE OR INSERT ON AVION
 DECLARE 
@@ -11,20 +16,6 @@ BEGIN
       raise_application_error ( -20002, 'La capacité doit être compris entre 15 et 30 places.');
     endif;
 end; 
-
---TRIGGER
-
---La capacité de ces appareils est comprise entre 15 et 30 places en fonction des types. 
-CREATE OR REPLACE TRIGGER check_place AFTER
-UPDATE OR INSERT ON AVION
-DECLARE nbplace NUMBER(2);
-BEGIN
-SELECT capacite
-INTO nbplace
-FROM AVION
-if (nbplace<15 or nbplace>30) then
-  raise_application_error ( -20002, 'La capacité doit être compris entre 15 et 30 places.');
-end;  
 
 
 --La législation aérienne impose une révision tous les 6 mois ou toutes les 500 heures
