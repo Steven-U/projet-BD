@@ -85,5 +85,5 @@ INSERT INTO escale(num, num_mission ,ville ,h_arr,duree) values (seqescale.nextv
 INSERT INTO escale(num, num_mission ,ville ,h_arr,duree) values (seqescale.nextval, '7','Annecy','14','1');
 INSERT INTO escale(num, num_mission ,ville ,h_arr,duree) values (seqescale.nextval, '8','Annecy','17','1');
 
-INSERT INTO revision (id,id_av,date_rev,rapport,h_total_vol,h_der_rev,nom_mecanicien) values (seqrevision.nextval,'13','01/01/2015','roue','1000','500','Diaz');
-INSERT INTO revision (id,id_av,date_rev,rapport,h_total_vol,h_der_rev,nom_mecanicien) values (seqrevision.nextval,'13','01/10/2014','volant','500','500','Diaz');
+INSERT INTO revision (id,id_av,date_rev,rapport,h_total_vol,h_der_rev,nom_mecanicien) values (seqrevision.nextval,'3','01/01/2015','roue','1000','500','Diaz');
+INSERT INTO revision (id,id_av,date_rev,rapport,h_total_vol,h_der_rev,nom_mecanicien) values (seqrevision.nextval,'3','01/10/2014','volant','500','500','Diaz');
