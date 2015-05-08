@@ -1,14 +1,14 @@
 --Supression des données
 
---Changer l'ordre pour ne pas avoir de problème avec les contraintes
+drop table AVION cascade constraints;
+drop table REVISION cascade constraints;
+drop table personnel_sol cascade constraints;
+drop table personnel_nav cascade constraints;
+drop table Client cascade constraints;
+drop table vol cascade constraints;
+drop table Mission cascade constraints;
+drop table escale cascade constraints;
+drop table Equipage_Vol cascade constraints;
+drop table Reservation cascade constraints;
 
-drop table AVION;
-drop table REVISION;
-drop table personnel_sol;
-drop table personnel_nav;
-drop table Client;
-drop table VOL;
-drop table Mission;
-drop table escale;
-drop table Equipage_Vol;
-drop table Reservation;
+
