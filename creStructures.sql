@@ -105,9 +105,9 @@ CREATE TABLE VOL (
 	date_depart 	DATE NOT NULL,
 	avion 			NUMBER NOT NULL,
 	id_mission number not null,
-  PRIMARY KEY (id),
+  	PRIMARY KEY (id),
 	FOREIGN KEY (avion) REFERENCES avion(id) ON DELETE CASCADE,
-  FOREIGN KEY (id_mission) REFERENCES mission(num) ON DELETE CASCADE
+  	FOREIGN KEY (id_mission) REFERENCES mission(num) ON DELETE CASCADE
 ); 
 
 
