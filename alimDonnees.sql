@@ -61,14 +61,14 @@ INSERT INTO client(id,prenom,nom,tel) values (seqclient.nextval, 'Jean','Lau','0
 INSERT INTO client(id,prenom,nom,tel) values (seqclient.nextval, 'Jean','Louis','0154976542');
 
 --Mission : 8
-INSERT INTO mission(num, num_vol,date_depart ,h_dep,id_avion,ville_dep,ville_arr) values (seqmission.nextval,'1','19/12/2014','10', '1', 'Créteil','Annecy');
-INSERT INTO mission(num, num_vol,date_depart ,h_dep,id_avion,ville_dep,ville_arr) values (seqmission.nextval, '2','19/12/2014','14', '1', 'Annecy','Créteil');
-INSERT INTO mission(num, num_vol,date_depart ,h_dep,id_avion,ville_dep,ville_arr) values (seqmission.nextval, '3','20/12/2014','11', '2', 'Léman','Marseille');
-INSERT INTO mission(num, num_vol,date_depart ,h_dep,id_avion,ville_dep,ville_arr) values (seqmission.nextval, '4','20/12/2014','11', '2','Marseille','Léman');
-INSERT INTO mission(num, num_vol,date_depart ,h_dep,id_avion,ville_dep,ville_arr) values (seqmission.nextval, '5','27/12/2014','10', '3','Créteil','Brest');
-INSERT INTO mission(num, num_vol,date_depart ,h_dep,id_avion,ville_dep,ville_arr) values (seqmission.nextval, '6','27/12/2014','14','3','Brest','Créteil');
-INSERT INTO mission(num, num_vol,date_depart ,h_dep,id_avion,ville_dep,ville_arr) values (seqmission.nextval, '7','27/12/2014','13','4','Léman','Lyon');
-INSERT INTO mission(num, num_vol,date_depart ,h_dep,id_avion,ville_dep,ville_arr) values (seqmission.nextval, '8','27/12/2014','16','4','Lyon','Léman');
+INSERT INTO mission(num, date_depart ,h_dep,ville_dep,ville_arr) values (seqmission.nextval,'19/12/2014','10', 'Créteil','Annecy');
+INSERT INTO mission(num, date_depart ,h_dep,ville_dep,ville_arr) values (seqmission.nextval, '19/12/2014','14', 'Annecy','Créteil');
+INSERT INTO mission(num, date_depart ,h_dep,ville_dep,ville_arr) values (seqmission.nextval, '20/12/2014','11',  'Léman','Marseille');
+INSERT INTO mission(num, date_depart ,h_dep,ville_dep,ville_arr) values (seqmission.nextval, '20/12/2014','11', 'Marseille','Léman');
+INSERT INTO mission(num, date_depart ,h_dep,ville_dep,ville_arr) values (seqmission.nextval, '27/12/2014','10', 'Créteil','Brest');
+INSERT INTO mission(num, date_depart ,h_dep,ville_dep,ville_arr) values (seqmission.nextval, '27/12/2014','14', 'Brest','Créteil');
+INSERT INTO mission(num, date_depart ,h_dep,ville_dep,ville_arr) values (seqmission.nextval, '27/12/2014','13', 'Léman','Lyon');
+INSERT INTO mission(num, date_depart ,h_dep,ville_dep,ville_arr) values (seqmission.nextval, '27/12/2014','16', 'Lyon','Léman');
 
 --Escale
 INSERT INTO escale(num, num_mission ,ville ,h_arr,duree) values (seqescale.nextval, '1','Enghien','10','3');
@@ -84,3 +84,6 @@ INSERT INTO escale(num, num_mission ,ville ,h_arr,duree) values (seqescale.nextv
 
 INSERT INTO revision (id,id_av,date_rev,rapport,h_total_vol,h_der_rev,nom_mecanicien) values (seqrevision.nextval,'3','01/01/2015','roue','1000','500','Diaz');
 INSERT INTO revision (id,id_av,date_rev,rapport,h_total_vol,h_der_rev,nom_mecanicien) values (seqrevision.nextval,'3','01/10/2014','volant','500','500','Diaz');
+
+INSERT INTO VOL (id,date_depart,avion,id_mission) VALUES(seqvol.nextval,'08/05/2015','2','1');
+INSERT INTO VOL (id,date_depart,avion,id_mission) VALUES(seqvol.nextval,'19/12/2014','1','1');
