@@ -53,6 +53,15 @@ INSERT INTO personnel_sol  (id,prenom,nom,tel,adr,salaire,fonction,date_emb) VAL
 INSERT INTO client(id,prenom,nom,tel) values (seqclient.nextval, 'Jean','Tille','0154976532');
 INSERT INTO client(id,prenom,nom,tel) values (seqclient.nextval, 'Paul','Louis','0154976538');
 INSERT INTO client(id,prenom,nom,tel) values (seqclient.nextval, 'Charles','Lau','0154976542');
+INSERT INTO client(id,prenom,nom,tel) values (seqclient.nextval, 'Charles','Louis','0154976542');
+INSERT INTO client(id,prenom,nom,tel) values (seqclient.nextval, 'Louis','Lau','0154976542');
+INSERT INTO client(id,prenom,nom,tel) values (seqclient.nextval, 'Jeanne','Lau','0154976542');
+INSERT INTO client(id,prenom,nom,tel) values (seqclient.nextval, 'Charles','Jean','0154976542');
+INSERT INTO client(id,prenom,nom,tel) values (seqclient.nextval, 'Paul','Lau','0154976542');
+INSERT INTO client(id,prenom,nom,tel) values (seqclient.nextval, 'Charles','Paul','0154976542');
+INSERT INTO client(id,prenom,nom,tel) values (seqclient.nextval, 'Charles','Louis','0154976542');
+INSERT INTO client(id,prenom,nom,tel) values (seqclient.nextval, 'Jean','Lau','0154976542');
+INSERT INTO client(id,prenom,nom,tel) values (seqclient.nextval, 'Jean','Louis','0154976542');
 
 --Mission : 8
  --num             NUMBER NOT NULL,
