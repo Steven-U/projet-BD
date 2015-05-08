@@ -1,5 +1,7 @@
-
-
+--Contraintes d'intégrité
+ALTER TABLE AVION 
+ADD CONSTRAINT CK_capacite 
+CHECK (capacite between 15 and 30) ;
 
 --TRIGGER
 
