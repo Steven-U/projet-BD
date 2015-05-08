@@ -87,3 +87,6 @@ INSERT INTO revision (id,id_av,date_rev,rapport,h_total_vol,h_der_rev,nom_mecani
 
 INSERT INTO VOL (id,date_depart,avion,id_mission) VALUES(seqvol.nextval,'08/05/2015','2','1');
 INSERT INTO VOL (id,date_depart,avion,id_mission) VALUES(seqvol.nextval,'19/12/2014','1','1');
+
+insert into equipage_vol (id_vol,id_personnel) values(1,1);
+insert into equipage_vol (id_vol,id_personnel) values(2,2);
