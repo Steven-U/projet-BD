@@ -136,16 +136,14 @@ CREATE TABLE Equipage_Vol (
 
 --Reservation
 
-CREATE TABLE Reservation (
-	id 					NUMBER NOT NULL,
-	Ville_dep 				VARCHAR2(50) NOT NULL,
-        Ville_arr 				VARCHAR2(50) NOT NULL,
-	id_client 			NUMBER NOT NULL,
-	date_reservation 	DATE NOT NULL,
-	id_vol 				NUMBER NOT NULL,
-	PRIMARY KEY (id),
-	FOREIGN KEY (id_client) REFERENCES client(id) ON DELETE CASCADE,
-	FOREIGN KEY (id_vol) REFERENCES vol(id) ON DELETE CASCADE
-);
+CREATE TABLE RESERVATION
+  (
+    villeOrigine     VARCHAR2(30) NOT NULL,
+    villeDestination VARCHAR2(30) NOT NULL,
+    dateVol          DATE,
+    nombrePassagers   NUMBER(2),
+    nomClient        VARCHAR2(30),
+    listePassager    VARCHAR(300)
+  );
 
 
