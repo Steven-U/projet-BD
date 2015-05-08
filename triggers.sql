@@ -14,7 +14,7 @@ BEGIN
     
     if (nbplace<15 or nbplace>30) then
       raise_application_error ( -20002, 'La capacité doit être compris entre 15 et 30 places.');
-    endif;
+    end if;
 end; 
 
 -- Trigger qui vérifie que l'heure de départ < l'heure d'arrivée
