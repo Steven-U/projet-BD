@@ -106,7 +106,7 @@ CREATE TABLE Mission (
 
 CREATE TABLE VOL (
 	id 				NUMBER NOT NULL,
-	num_vol  		varchar2(10) NOT NULL,
+	num_vol  		Number NOT NULL,
 	date_depart 	DATE NOT NULL,
 	avion 			NUMBER NOT NULL,
 	ville_dep 		varchar2(50) NOT NULL,
