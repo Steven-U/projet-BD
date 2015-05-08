@@ -138,7 +138,8 @@ CREATE TABLE Equipage_Vol (
 
 CREATE TABLE Reservation (
 	id 					NUMBER NOT NULL,
-	place 				NUMBER NOT NULL,
+	Ville_dep 				VARCHAR2(50) NOT NULL,
+        Ville_arr 				VARCHAR2(50) NOT NULL,
 	id_client 			NUMBER NOT NULL,
 	date_reservation 	DATE NOT NULL,
 	id_vol 				NUMBER NOT NULL,
@@ -146,3 +147,5 @@ CREATE TABLE Reservation (
 	FOREIGN KEY (id_client) REFERENCES client(id) ON DELETE CASCADE,
 	FOREIGN KEY (id_vol) REFERENCES vol(id) ON DELETE CASCADE
 );
+
+
