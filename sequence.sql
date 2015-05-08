@@ -1,6 +1,3 @@
-# projet-BD
-
-
 --Séquence pour l'auto-incrémenation(id) de la table AVION
 
 CREATE SEQUENCE seqavion
