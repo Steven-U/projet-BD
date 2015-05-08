@@ -20,7 +20,7 @@ INSERT INTO personnel_nav (id,prenom,nom,tel,adr,salaire,fonction,date_emb) VALU
 INSERT INTO personnel_nav (id,prenom,nom,tel,adr,salaire,fonction,date_emb) VALUES (seqpersnav.nextval,'Sébastien', 'Bourdais','0103030460','11 rue de Paris','2300','pilote','01/01/2015');
 INSERT INTO personnel_nav (id,prenom,nom,tel,adr,salaire,fonction,date_emb) VALUES (seqpersnav.nextval,'Romain', 'Grosjean','0103030460','12 rue de Paris','2400','pilote','01/05/2014');
 
---personnel nol : 15 Hotesses/Stewards
+--personnel nav : 15 Hotesses/Stewards
 INSERT INTO personnel_nav (id,prenom,nom,tel,adr,salaire,fonction,date_emb) VALUES(seqpersnav.nextval,'Scarlett','Johansson','0102030405','1 rue de Paris','3000','Hotesse','01/02/2014');
 INSERT INTO personnel_nav (id,prenom,nom,tel,adr,salaire,fonction,date_emb) VALUES (seqpersnav.nextval,'Cameron', 'Diaz','0103030406','2 rue de Paris','2000','Hotesse','01/01/2014');
 INSERT INTO personnel_nav (id,prenom,nom,tel,adr,salaire,fonction,date_emb) VALUES(seqpersnav.nextval,'Natalie', 'Portman','0102030608','3 rue de Paris','1900','Hotesse','01/03/2013');
@@ -36,8 +36,6 @@ INSERT INTO personnel_nav (id,prenom,nom,tel,adr,salaire,fonction,date_emb) VALU
 INSERT INTO personnel_nav (id,prenom,nom,tel,adr,salaire,fonction,date_emb) VALUES (seqpersnav.nextval, 'George', 'Clooney','0103030460','13 rue de Paris','2300','Steward','01/01/2015');
 INSERT INTO personnel_nav (id,prenom,nom,tel,adr,salaire,fonction,date_emb) VALUES (seqpersnav.nextval,'Jean', 'Dujardin','0103037460','14 rue de Paris','2000','Steward','01/05/2014');
 INSERT INTO personnel_nav (id,prenom,nom,tel,adr,salaire,fonction,date_emb) VALUES (seqpersnav.nextval,'Matt', 'Damon','0103036514','15 rue de Paris','3000','Steward','01/06/2014');
-
-
 
 --3 mécaniciens et 4 administratifs.
 INSERT INTO personnel_sol  (id,prenom,nom,tel,adr,salaire,fonction,date_emb) VALUES(seqperssol.nextval,'Bob','Johansson','0102030405','1 rue de Paris','1200','mécanicien','01/02/2014');
@@ -63,20 +61,11 @@ INSERT INTO client(id,prenom,nom,tel) values (seqclient.nextval, 'Jean','Lau','0
 INSERT INTO client(id,prenom,nom,tel) values (seqclient.nextval, 'Jean','Louis','0154976542');
 
 --Mission : 8
- --num             NUMBER NOT NULL,
- --  num_vol          varchar2(10) NOT NULL,
-  -- date_depart     DATE NOT NULL,
- --  h_dep             NUMBER NOT NULL,
-  -- id_avion             NUMBER NOT NULL,
-  -- ville_dep         varchar2(50) NOT NULL,
-  -- ville_arr         varchar2(50) NOT NULL,
- 
 INSERT INTO mission(num, num_vol,date_depart ,h_dep,id_avion,ville_dep,ville_arr) values (seqmission.nextval,'1','19/12/2014','10', '1', 'Créteil','Annecy');
 INSERT INTO mission(num, num_vol,date_depart ,h_dep,id_avion,ville_dep,ville_arr) values (seqmission.nextval, '2','19/12/2014','14', '1', 'Annecy','Créteil');
 INSERT INTO mission(num, num_vol,date_depart ,h_dep,id_avion,ville_dep,ville_arr) values (seqmission.nextval, '3','20/12/2014','11', '2', 'Léman','Marseille');
 INSERT INTO mission(num, num_vol,date_depart ,h_dep,id_avion,ville_dep,ville_arr) values (seqmission.nextval, '4','20/12/2014','11', '2','Marseille','Léman');
 INSERT INTO mission(num, num_vol,date_depart ,h_dep,id_avion,ville_dep,ville_arr) values (seqmission.nextval, '5','27/12/2014','10', '3','Créteil','Brest');
-
 INSERT INTO mission(num, num_vol,date_depart ,h_dep,id_avion,ville_dep,ville_arr) values (seqmission.nextval, '6','27/12/2014','14','3','Brest','Créteil');
 INSERT INTO mission(num, num_vol,date_depart ,h_dep,id_avion,ville_dep,ville_arr) values (seqmission.nextval, '7','27/12/2014','13','4','Léman','Lyon');
 INSERT INTO mission(num, num_vol,date_depart ,h_dep,id_avion,ville_dep,ville_arr) values (seqmission.nextval, '8','27/12/2014','16','4','Lyon','Léman');
