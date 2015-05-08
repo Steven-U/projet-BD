@@ -8,16 +8,16 @@
 --Et remis foreign key sur avion de la table vol pour eviter un controle dans la procédure suivante.
 --Ma procédure met simplement a jour un vol en lui ajoutant l'avion mis en paramètre.
 --Comme ya foreign key entre avion et avion.id pas de souci d'existance ni de controle
---Si vol.num_vol exitant pas gestion d'erreur le gère
+--Si vol.id exitant pas gestion d'erreur le gère
 CREATE OR REPLACE PROCEDURE P_AFFECTATION_AVION(numeroAvion NUMBER, numeroVol NUMBER) AS
 BEGIN
   Update vol
   set vol.AVION = numeroAvion
-  Where vol.num_vol = numeroVol;
+  Where vol.id = numeroVol;
   EXCEPTION WHEN OTHERS THEN
   DBMS_OUTPUT.PUT_LINE('SQLCODE:'||SQLCODE||'SQLERROR:'||SQLERRM);
   RAISE_APPLICATION_ERROR(-20000,'Vérifier l existence de l avion ainsi que le vol');
-END  ;
+  END;
 --EXECUTION DE LA PROCEDURE AJOUTE BIEN L'AVION id 3 AU VOL 1904
 EXEC  P_AFFECTATION_AVION(3,1904);
 #####################################################################################################################
