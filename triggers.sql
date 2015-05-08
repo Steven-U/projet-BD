@@ -3,6 +3,22 @@ ALTER TABLE AVION
 ADD CONSTRAINT CK_capacite 
 CHECK (capacite between 15 and 30) ;
 
+ALTER TABLE personnel_nav
+ADD CONSTRAINT CK_salaire_nav 
+CHECK (salaire > 0);
+
+ALTER TABLE personnel_sol
+ADD CONSTRAINT CK_salaire_sol 
+CHECK (salaire > 0);
+
+ALTER TABLE mission
+ADD CONSTRAINT CK_ville_mission
+CHECK (ville_dep != ville_arr);
+
+ALTER TABLE vol
+ADD CONSTRAINT CK_ville_vol
+CHECK (ville_dep != ville_arr);
+
 --TRIGGER
 
 --La capacité de ces appareils est comprise entre 15 et 30 places en fonction des types. 
