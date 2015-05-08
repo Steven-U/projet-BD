@@ -1,4 +1,4 @@
--- Trigger qui vérifie que l'heure de départ < l'heure d'arrivée
+
 
 
 --TRIGGER
@@ -17,18 +17,26 @@ BEGIN
     endif;
 end; 
 
+-- Trigger qui vérifie que l'heure de départ < l'heure d'arrivée
+--vérifie la ville de départ et d'arrivée
+CREATE OR REPLACE TRIGGER checkville AFTER
+UPDATE OR INSERT ON VOL
+DECLARE 
+ville_dep varchar(15);
+ville_arr varchar(15);
+h_dep varchar(15);
+h_arr varchar(15);
+BEGIN
+SELECT ville_dep, ville_arr, h_Depart, h_arr
+FROM VOL;
+if (ville_dep = ville_arr or h_dep>h_arr) then
+    raise_application_error(-20225,'Insertion impossible !');
+end if;
+END;
 
 --La législation aérienne impose une révision tous les 6 mois ou toutes les 500 heures
 --de vols sous peine d’interdiction de vol. 
-CREATE OR REPLACE TRIGGER check_revision AFTER
-UPDATE OR INSERT ON AVION
-DECLARE nbheure NUMBER(3);
-BEGIN
-SELECT nbheure
-INTO nbplace
-FROM AVION
-WHERE;
-end;  
+
 
 
 
